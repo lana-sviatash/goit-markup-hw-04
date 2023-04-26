@@ -6,6 +6,12 @@
 --color-main-title: #ffffff; 
 --color-text-h2-h3-titles: #2e2f42;
 --color-btn-background-main-page: #4d5ae5;
+--color-social-icon-background-main: #4d5ae5;
+--color-social-icon-background-active: #404bbf;
+--color-social-icon-background-footer-active: #31d0aa;
+--color-social-icon-main: #f4f4fd;
+--color-customer-card-main: #8e8f99;
+--color-customer-card-active: #404bbf;
 --color-btn-text-main-page: #ffffff;
 --color-btn-background-portfolio: #f4f4fd;
 --color-btn-text-portfolio: #4d5ae5;
@@ -19,6 +25,7 @@
 --color-border-btn-portfolio: #e7e9fc;
 --color-section-cloud: #f4f4fd;
 --color-border-foto: #e7e9fc;
+--color-border-foto-active: #f4f4fd;
 
     /* FONT  */
 --font-main: 'Roboto', sans-serif;
@@ -263,7 +270,10 @@ color: var(--color-text-h2-h3-titles);
 
 /* ==========================HERO========================== */
 .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/bg-hero.jpg");
+    background-size: cover;
     background-color: var(--color-background-dark);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-container {
@@ -298,6 +308,17 @@ color: var(--color-text-h2-h3-titles);
     flex-basis: calc((100% - 72px) / 4);
 }
 
+.ad-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    padding: 24px 100px 24px 100px;
+    margin-bottom: 8px;
+}
+
+
 /* ==========================/ADVANTAGES========================== */
 
 /* ==========================WHAT ARE WE DOING========================== */
@@ -331,6 +352,7 @@ color: var(--color-text-h2-h3-titles);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     flex-basis: calc(100% / 4 - 26px);
+
 }
 
 .team-names {
@@ -345,7 +367,77 @@ color: var(--color-text-h2-h3-titles);
     background-color: var(--color-section-cloud)
 }
 
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-social-icon-background-main);
+}
+
+.social-list-link:hover,
+.social-list-link:focus,
+.social-list-link:active {
+    background-color: var(--color-social-icon-background-active);
+}
+
+.team-block-text {
+    margin-bottom: 8px;
+}
+
+.social-list-icon {
+    fill: var(--color-social-icon-main);
+}
+
 /* ==========================/OUR TEAM========================== */
+
+/* ==========================CUSTOMERS========================== */
+.customer-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.customer-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--color-customer-card-main);
+    border-radius: 4px;
+    color: var(--color-customer-card-main);
+}
+
+.customer-list-link:hover,
+.customer-list-link:focus,
+.customer-list-link:active {
+    border: 1px solid var(--color-customer-card-active);
+    color: var(--color-customer-card-active);
+}
+
+
+.customer-list-icon {
+    fill: currentColor;
+}
+
+.customer-list-icon:hover,
+.customer-list-icon:focus,
+.customer-list-icon:active {
+    fill: currentColor;
+}
+
+
+/* ==========================/CUSTOMERS========================== */
+
 
 /* ==========================FOOTER========================== */
 .footer-section {
@@ -355,6 +447,8 @@ color: var(--color-text-h2-h3-titles);
 
 .footer-container {
     display: flex;
+    gap: 120px;
+    justify-content: start;
 }
 
 .footer-logo-container {
@@ -362,8 +456,10 @@ color: var(--color-text-h2-h3-titles);
     flex-direction: column;
 }
 
-.logo-footer {
-margin-bottom: 16px;
+.logo-footer, 
+.footer-social-media {
+    margin-bottom: 16px;
+    padding: 0;
 }
 
 .text-footer {
@@ -378,7 +474,38 @@ margin-bottom: 16px;
     color: var(--color-text-light);
 }
 
-/* ==========================FOOTER========================== */
+.footer-social-container {
+    display: flex;
+    flex-direction: column;
+    width: 208px;
+}
+
+.footer-social-media,
+.footer-social-list-container {
+    display: flex;
+}
+
+.social-list-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-social-media-title {
+    font-weight: var(--font-weight-nav);
+    font-size: var(--font-size-nav);
+    line-height: var(--line-height-nav);
+    letter-spacing: var(--letter-spacing-main);
+    color: var(--color-main-title);
+}
+
+.social-list-footer-active:hover,
+.social-list-footer-active:focus,
+.social-list-footer-active:active {
+    background-color: var(--color-social-icon-background-footer-active);
+}
+
+/* ==========================/FOOTER========================== */
 
 /* ==========================PORTFOLIO-BUTTOM SECTION========================== */
 /* COMPONENTS */
@@ -429,28 +556,25 @@ margin-bottom: 16px;
 }
 
 .foto-container-list-item {
-    /* flex-basis: calc(100% / 3 - 24px); */
-    width: 360;
+    flex-basis: calc(100% / 3 - 24px);
+    /* width: 360; */
     margin-top: 48px;
     margin-left: 24px;
-    
-}
-
-.foto-card {
-    /* border: 1px solid var(--color-border-foto); */
-    border-radius: 4px;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    overflow: hidden;
-
 }
 
 .foto-collection-name {
     padding-left: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
-    border-right: 1px solid var(--color-border-foto);
-    border-left: 1px solid var(--color-border-foto);
-    border-bottom: 1px solid var(--color-border-foto);
+    border: 1px solid var(--color-border-foto);
+    border-top: none;
+}
+
+.foto-card:hover,
+.foto-card:focus,
+.foto-card:active {
+        border: 1px solid var(--color-border-foto-active);
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .block-text-item {

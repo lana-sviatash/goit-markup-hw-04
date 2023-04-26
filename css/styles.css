@@ -570,6 +570,12 @@ color: var(--color-text-h2-h3-titles);
     border-top: none;
 }
 
+.foto-card:hover>.foto-collection-name,
+.foto-card:focus>.foto-collection-name,
+.foto-card:active>.foto-collection-name {
+    border: none;
+}
+
 .foto-card:hover,
 .foto-card:focus,
 .foto-card:active {

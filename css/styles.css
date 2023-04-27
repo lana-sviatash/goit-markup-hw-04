@@ -254,7 +254,7 @@ color: var(--color-text-h2-h3-titles);
 }
 
 .main-address {
-        font-style: normal;
+    font-style: normal;
 }
 
 .address-container {
@@ -263,8 +263,8 @@ color: var(--color-text-h2-h3-titles);
 
 .address-mail-phone {
     font-style: normal;
-        font-weight: var(--font-weight-address);
-        color: var(--color-address);
+    font-weight: var(--font-weight-address);
+    color: var(--color-address);
 }
 /* ==========================/HEADER========================== */
 
@@ -274,6 +274,9 @@ color: var(--color-text-h2-h3-titles);
     background-size: cover;
     background-color: var(--color-background-dark);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-container {
@@ -314,7 +317,7 @@ color: var(--color-text-h2-h3-titles);
     align-items: center;
     background-color: #F4F4FD;
     border-radius: 4px;
-    padding: 24px 100px 24px 100px;
+    height: 112px;
     margin-bottom: 8px;
 }
 
@@ -456,8 +459,8 @@ color: var(--color-text-h2-h3-titles);
     flex-direction: column;
 }
 
-.logo-footer, 
-.footer-social-media {
+.logo-footer,
+.footer-social-media-title {
     margin-bottom: 16px;
     padding: 0;
 }
@@ -480,10 +483,10 @@ color: var(--color-text-h2-h3-titles);
     width: 208px;
 }
 
-.footer-social-media,
+/* .footer-social-media,
 .footer-social-list-container {
     display: flex;
-}
+} */
 
 .social-list-footer {
     display: flex;
@@ -557,7 +560,6 @@ color: var(--color-text-h2-h3-titles);
 
 .foto-container-list-item {
     flex-basis: calc(100% / 3 - 24px);
-    /* width: 360; */
     margin-top: 48px;
     margin-left: 24px;
 }
@@ -570,6 +572,12 @@ color: var(--color-text-h2-h3-titles);
     border-top: none;
 }
 
+.foto-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
 .foto-card:hover>.foto-collection-name,
 .foto-card:focus>.foto-collection-name,
 .foto-card:active>.foto-collection-name {
@@ -579,8 +587,12 @@ color: var(--color-text-h2-h3-titles);
 .foto-card:hover,
 .foto-card:focus,
 .foto-card:active {
-        border: 1px solid var(--color-border-foto-active);
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    /* border: 1px solid var(--color-border-foto-active); */
+}
+
+.foto-card-image {
+
 }
 
 .block-text-item {
